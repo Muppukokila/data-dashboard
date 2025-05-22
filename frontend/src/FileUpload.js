@@ -7,7 +7,8 @@ function FileUpload({ setData }) {
     const formData = new FormData();
     formData.append('file', file);
 
-    const res = await axios.post('https://data-dashboard-vvrn.onrender.com', formData);
+    const res = await axios.post('https://data-dashboard-vvrn.onrender.com/upload', formData);
+
 
     setData(res.data.data);
   };
